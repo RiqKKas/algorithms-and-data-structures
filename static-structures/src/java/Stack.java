@@ -1,5 +1,3 @@
-package java;
-
 public class Stack<T> {
 
     // * Atributos
@@ -65,20 +63,20 @@ public class Stack<T> {
 
     //Retorna uma representação string do objeto
     public String toString() {
-        StringBuilder list = new StringBuilder();
+        StringBuilder stack = new StringBuilder();
 
-        list.append("[");
+        stack.append("[");
 
         for (int i = 0; i < this.size - 1; i++) {
-            list.append(this.elements[i]);
-            list.append(", ");
+            stack.append(this.elements[i]);
+            stack.append(", ");
         }
 
-        if (this.size > 0) list.append(this.elements[this.size - 1]);
+        if (this.size > 0) stack.append(this.elements[this.size - 1]);
 
-        list.append("]");
+        stack.append("]");
 
-        return list.toString();
+        return stack.toString();
     }
 
     // * Métodos de Remoção

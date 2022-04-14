@@ -1,5 +1,3 @@
-package java;
-
 public class PriorityQueue<T> {
 
     // * Atributos
@@ -77,20 +75,20 @@ public class PriorityQueue<T> {
 
     //Retorna uma representação string do objeto
     public String toString() {
-        StringBuilder list = new StringBuilder();
+        StringBuilder priorityQueue = new StringBuilder();
 
-        list.append("[");
+        priorityQueue.append("[");
 
         for (int i = 0; i < this.size - 1; i++) {
-            list.append(this.elements[i]);
-            list.append(", ");
+            priorityQueue.append(this.elements[i]);
+            priorityQueue.append(", ");
         }
 
-        if (this.size > 0) list.append(this.elements[this.size - 1]);
+        if (this.size > 0) priorityQueue.append(this.elements[this.size - 1]);
 
-        list.append("]");
+        priorityQueue.append("]");
 
-        return list.toString();
+        return priorityQueue.toString();
     }
 
     // * Métodos de Remoção

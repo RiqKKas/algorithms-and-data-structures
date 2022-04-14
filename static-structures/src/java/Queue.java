@@ -1,5 +1,3 @@
-package java.staticstructures;
-
 public class Queue<T> {
 
     // * Atributos
@@ -63,20 +61,20 @@ public class Queue<T> {
 
     //Retorna uma representação string do objeto
     public String toString() {
-        StringBuilder list = new StringBuilder();
+        StringBuilder queue = new StringBuilder();
 
-        list.append("[");
+        queue.append("[");
 
         for (int i = 0; i < this.size - 1; i++) {
-            list.append(this.elements[i]);
-            list.append(", ");
+            queue.append(this.elements[i]);
+            queue.append(", ");
         }
 
-        if (this.size > 0) list.append(this.elements[this.size - 1]);
+        if (this.size > 0) queue.append(this.elements[this.size - 1]);
 
-        list.append("]");
+        queue.append("]");
 
-        return list.toString();
+        return queue.toString();
     }
 
     // * Métodos de Remoção

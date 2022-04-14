@@ -80,6 +80,7 @@ public class List<T> {
     //Retorna o elemento na posição especificada nesta lista.
     public T get(int index) {
         if (this.isEmpty()) return null;
+        this.checkIndex(index);
         return this.elements[index];
     }
 
