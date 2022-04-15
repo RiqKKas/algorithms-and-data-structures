@@ -5,6 +5,7 @@
 Repositório voltado para estudos sobre os algoritmos e estruturas de dados clássicos/contemporâneos da Ciência da Computação.
 
 ---
+
 <table align="center">
   <tr>
     <td width="300px"><b>Estruturas de Dados</b></td>
@@ -30,6 +31,26 @@ Repositório voltado para estudos sobre os algoritmos e estruturas de dados clá
     <td width="300px"><a href="https://pt.wikipedia.org/wiki/FIFO">Fila de Prioridade (estática)</a></td>
     <td width="300px"><a href="./static-structures/src/java/PriorityQueue.java">Java</a></td>
     <td width="300px"><a href="./static-structures/src/js/PriorityQueue.js">JavaScrip</a></td>
+  </tr>
+</table>
+
+---
+
+<table align="center">
+  <tr>
+    <td width="300px"><b>Algoritmos</b></td>
+    <td width="300px"><b>Java</b></td>
+    <td width="300px"><b>JavaScript</b></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Busca_linear">Busca Sequencial</a></td>
+    <td width="300px"><a href="./algorithms/src/java/SequentialSearch.java">Java</a></td>
+    <td width="300px"><a href="./algorithms/src/js/SequentialSearch.js ">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Pesquisa_bin%C3%A1ria">Busca Binária</a></td>
+    <td width="300px"><a href="./algorithms/src/java/BinarySearch.java">Java</a></td>
+    <td width="300px"><a href="./algorithms/src/java/BinarySearch.java">JavaScrip</a></td>
   </tr>
 </table>
 
