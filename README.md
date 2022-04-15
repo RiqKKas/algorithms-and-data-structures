@@ -50,7 +50,7 @@ Repositório voltado para estudos sobre os algoritmos e estruturas de dados clá
   <tr>
     <td width="300px"><a href="https://pt.wikipedia.org/wiki/Pesquisa_bin%C3%A1ria">Busca Binária</a></td>
     <td width="300px"><a href="./algorithms/src/java/BinarySearch.java">Java</a></td>
-    <td width="300px"><a href="./algorithms/src/java/BinarySearch.java">JavaScrip</a></td>
+    <td width="300px"><a href="./algorithms/src/js/BinarySearch.js">JavaScrip</a></td>
   </tr>
 </table>
 
