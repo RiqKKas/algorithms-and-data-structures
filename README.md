@@ -14,23 +14,27 @@ Repositório voltado para estudos sobre os algoritmos e estruturas de dados clá
   </tr>
   <tr>
     <td width="300px"><a href="https://pt.wikipedia.org/wiki/Lista">Lista (estática)</a></td>
-    <td width="300px"><a href="./static-structures/src/java/List.java">Java</a></td>
-    <td width="300px"><a href="./static-structures/src/js/List.js">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/List.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/List.js">JavaScrip</a></td>
   </tr>
   <tr>
     <td width="300px"><a href="https://pt.wikipedia.org/wiki/Pilha_(inform%C3%A1tica)">Pilha (estática)</a></td>
-    <td width="300px"><a href="./static-structures/src/java/Stack.java">Java</a></td>
-    <td width="300px"><a href="./static-structures/src/js/Stack.js">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/Stack.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/Stack.js">JavaScrip</a></td>
   </tr>
    <tr>
     <td width="300px"><a href="https://pt.wikipedia.org/wiki/FIFO">Fila (estatica)</a></td>
-    <td width="300px"><a href="./static-structures/src/java/Queue.java">Java</a></td>
-    <td width="300px"><a href="./static-structures/src/js/Queue.js">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/Queue.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/Queue.js">JavaScrip</a></td>
   </tr>
    <tr>
     <td width="300px"><a href="https://pt.wikipedia.org/wiki/FIFO">Fila de Prioridade (estática)</a></td>
-    <td width="300px"><a href="./static-structures/src/java/PriorityQueue.java">Java</a></td>
-    <td width="300px"><a href="./static-structures/src/js/PriorityQueue.js">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/PriorityQueue.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/PriorityQueue.js">JavaScrip</a></td>
+  </tr>
+   <td width="300px"><a href="https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca">Árvore Binária de Busca</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/BinarySearchTree.java">Java</a></td>
+    <td width="300px">JavaScrip</td>
   </tr>
 </table>
 
