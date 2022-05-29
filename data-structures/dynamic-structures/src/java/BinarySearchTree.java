@@ -1,3 +1,5 @@
+package java;
+
 public class BinarySearchTree {
 
     //classe necessaria para a estrutura ligada
@@ -91,6 +93,11 @@ public class BinarySearchTree {
     private int treeHeight(Node node) {
         if (node == null) return -1;
         return 1 + Math.max(this.treeHeight(node.leftChild), this.treeHeight(node.rightChild));
+    }
+
+    //verifica se a arvore esta vazia
+    public boolean isEmpty() {
+        return this.root == null;
     }
 
     //imprime a arvore no percurso "em ordem"
