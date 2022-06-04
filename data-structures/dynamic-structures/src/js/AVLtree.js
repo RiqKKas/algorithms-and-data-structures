@@ -1,41 +1,34 @@
-public class AVLtree {
-
-    //classe necessaria para a estrutura ligada
-    private static class Node {
-        private int value;
-        private int balancingFactor;
-
-        private Node parent;
-        private Node leftChild;
-        private Node rightChild;
-
-        public Node(int value) {
-            this.value = value;
-        }
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.balancingFactor = 0;
+        this.parent = null;
+        this.leftChild = null;
+        this.rightChild = null;
     }
+}
 
-    private Node root;
-
-    public AVLtree() {
+class AVLtree {
+    constructor() {
         this.root = null;
     }
 
     //insere um no na arvore obedecendo a definicao de arvore avl
-    public boolean insert(int value) {
+    insert(value) {
         if (this.contains(value)) return false;
 
-        Node newNode = new Node(value);
+        const newNode = new Node(value);
         if (this.isEmpty()) this.root = newNode;
-        else this.insert(newNode, this.root);
+        else this.insertAVL(newNode, this.root);
 
         return true;
     }
 
     //como a arvore avl e um derivado de arvore binaria de busca, ela segue a msm filosofia de insercao
-    private void insert(Node nodeToInsert, Node nodeToCompare) {
+    insertAVL(nodeToInsert, nodeToCompare) {
         if (nodeToInsert.value < nodeToCompare.value) {
             if (nodeToCompare.leftChild != null) {
-                this.insert(nodeToInsert, nodeToCompare.leftChild);
+                this.insertAVL(nodeToInsert, nodeToCompare.leftChild);
             } else {
                 nodeToCompare.leftChild = nodeToInsert;
                 nodeToInsert.parent = nodeToCompare;
@@ -43,7 +36,7 @@ public class AVLtree {
             }
         } else if (nodeToInsert.value > nodeToCompare.value) {
             if (nodeToCompare.rightChild != null) {
-                this.insert(nodeToInsert, nodeToCompare.rightChild);
+                this.insertAVL(nodeToInsert, nodeToCompare.rightChild);
             } else {
                 nodeToCompare.rightChild = nodeToInsert;
                 nodeToInsert.parent = nodeToCompare;
@@ -53,14 +46,14 @@ public class AVLtree {
     }
 
     //checagem de qual rotação de balanceamento usar, assim a efetuando
-    private void checkBalance(Node node) {
+    checkBalance(node) {
         this.setBalancingFactor(node); //setando o balanceamento do no atual
 
         if (node.balancingFactor == -2) { //caso 1: H D (p) < H E (p) então H(p) = -2
             if (this.treeHeight(node.leftChild.rightChild) < this.treeHeight(node.leftChild.leftChild)) {
                 //caso 1.1: H D (u) < H E (u)
                 node = this.rotateRight(node);
-            } else if (this.treeHeight(node.leftChild.rightChild) > this.treeHeight(node.leftChild.leftChild)){
+            } else if (this.treeHeight(node.leftChild.rightChild) > this.treeHeight(node.leftChild.leftChild)) {
                 //caso 1.2: H D (u) > H E (u)
                 node = this.doubleRotationLeftRight(node);
             }
@@ -68,7 +61,7 @@ public class AVLtree {
             if (this.treeHeight(node.rightChild.rightChild) < this.treeHeight(node.rightChild.leftChild)) {
                 //caso 2.1: H D (u) < H E (u)
                 node = this.doubleRotationRightLeft(node);
-            } else  if (this.treeHeight(node.rightChild.rightChild) > this.treeHeight(node.rightChild.leftChild)) {
+            } else if (this.treeHeight(node.rightChild.rightChild) > this.treeHeight(node.rightChild.leftChild)) {
                 //caso 2.2: H D (u) > H E (u)
                 node = this.rotateLeft(node);
             }
@@ -79,9 +72,9 @@ public class AVLtree {
         else this.root = node;
     }
 
-    private Node rotateRight(Node nodeRoot) {
+    rotateRight(nodeRoot) {
         //filho a esquerda agora oculpa o lugar de seu pai
-        Node leftChild = nodeRoot.leftChild;
+        const leftChild = nodeRoot.leftChild;
         leftChild.parent = nodeRoot.parent;
 
         //configurando o novo pai de leftChild
@@ -105,9 +98,9 @@ public class AVLtree {
         return leftChild;
     }
 
-    private Node rotateLeft(Node nodeRoot) {
+    rotateLeft(nodeRoot) {
         //filho a direita agora oculpa o lugar de seu pai
-        Node rightChild = nodeRoot.rightChild;
+        const rightChild = nodeRoot.rightChild;
         rightChild.parent = nodeRoot.parent;
 
         //configurando o novo pai de rightChild
@@ -131,14 +124,14 @@ public class AVLtree {
         return rightChild;
     }
 
-    private Node doubleRotationLeftRight(Node nodeRoot) {
+    doubleRotationLeftRight(nodeRoot) {
         //rotaciona a esquerda o filho a esquerda
         nodeRoot.leftChild = this.rotateLeft(nodeRoot.leftChild);
         //depois, rotaciona a direita o nodeRoot
         return this.rotateRight(nodeRoot);
     }
 
-    private Node doubleRotationRightLeft(Node nodeRoot) {
+    doubleRotationRightLeft(nodeRoot) {
         //rotaciona a direita o filho a direita
         nodeRoot.rightChild = this.rotateRight(nodeRoot.rightChild);
         //depois, rotaciona a esquerda o nodeRoot
@@ -146,17 +139,17 @@ public class AVLtree {
     }
 
     //calculo do balanceamento de um no, feito com auxilio da altura dos filhos
-    private void setBalancingFactor(Node node) {
+    setBalancingFactor(node) {
         node.balancingFactor = this.treeHeight(node.rightChild) - this.treeHeight(node.leftChild);
     }
 
     //remove elemento da arvore, se o msm existir nela
-    public boolean remove(int value) {
+    remove(value) {
         if (!this.contains(value)) return false;
-        else return this.remove(value, this.root);
+        else return this.removeAVL(value, this.root);
     }
 
-    private boolean remove(int value, Node nodeToCompare) {
+    removeAVL(value, nodeToCompare) {
         //procurando pelo no a remover
         if (value < nodeToCompare.value) {
             if (nodeToCompare.leftChild != null) return this.remove(value, nodeToCompare.leftChild);
@@ -170,9 +163,9 @@ public class AVLtree {
         return true;
     }
 
-    private void removeNode(Node nodeToRemove) {
+    removeNode(nodeToRemove) {
         //sucessor do no a remover
-        Node successorNodeLevel1;
+        let successorNodeLevel1;
 
         if (nodeToRemove.leftChild == null || nodeToRemove.rightChild == null) {
             if (nodeToRemove.parent == null) {
@@ -187,7 +180,7 @@ public class AVLtree {
         }
 
         //sucessor do sucessor do no a remover
-        Node successorNodeLevel2;
+        let successorNodeLevel2;
 
         //selecionando e setando successorNodeLevel2
         if (successorNodeLevel1.leftChild != null) successorNodeLevel2 = successorNodeLevel1.leftChild;
@@ -207,8 +200,8 @@ public class AVLtree {
     }
 
     //metodo que retorna um sucessor adequado para um determinado no
-    private Node lookSuccessor(Node predecessorNode) {
-        Node successorNode;
+    lookSuccessor(predecessorNode) {
+        let successorNode;
 
         //procura pelo menor no a direita da arvore, cuja a raiz e predecessorNode
         if (predecessorNode.rightChild != null) {
@@ -229,84 +222,84 @@ public class AVLtree {
     }
 
     //verifica se existe um determinado valor na arvore
-    public boolean contains(int value) {
-        return this.contains(this.root, value);
-    }
-
-    private boolean contains(Node node, int value) {
+    contains(value, node = this.root) {
         if (node == null) return false;
-        else if (value < node.value) return this.contains(node.leftChild, value); //procura na sub-arvore da esquerda
-        else if (value > node.value) return this.contains(node.rightChild, value); //procura na sub-arvore da direita
+        else if (value < node.value) return this.contains(value, node.leftChild); //procura na sub-arvore da esquerda
+        else if (value > node.value) return this.contains(value, node.rightChild); //procura na sub-arvore da direita
         else return true;
     }
 
-    public int numberOfNodes() {
-        return this.numberOfNodes(this.root);
-    }
-
     //retorna a quantidade de nos da arvore
-    private int numberOfNodes(Node node) {
+    numberOfNodes(node = this.root) {
         return node == null ? 0 : 1 + this.numberOfNodes(node.leftChild) + this.numberOfNodes(node.rightChild);
     }
 
-    public int treeHeight() {
-        return this.treeHeight(this.root);
-    }
-
     //retorna a altura de uma arvore/sub-arvore
-    private int treeHeight(Node node) {
+    treeHeight(node = this.root) {
         if (node == null) return -1;
         return 1 + Math.max(this.treeHeight(node.leftChild), this.treeHeight(node.rightChild));
     }
 
     //verifica se a arvore esta vazia
-    public boolean isEmpty() {
+    isEmpty() {
         return this.root == null;
     }
 
     //imprime a arvore no percurso "em ordem"
-    public void inOrder() {
-        System.out.print("InOrder: ");
-        this.inOrder(this.root);
-        System.out.println();
+    printInOrder() {
+        let inOrder = "InOrder: ";
+        inOrder += this.inOrder(this.root);
+        console.log(inOrder);
     }
 
-    private void inOrder(Node node) {
+    inOrder(node) {
+        let inOrder = "";
+
         if (node != null) {
-            this.inOrder(node.leftChild);
-            System.out.print(node.value + " ");
-            this.inOrder(node.rightChild);
+            inOrder += this.inOrder(node.leftChild);
+            inOrder += node.value + " ";
+            inOrder += this.inOrder(node.rightChild);
         }
+
+        return inOrder;
     }
 
     //imprime a arvore no percurso "pre ordem"
-    public void preOrder() {
-        System.out.print("PreOrder: ");
-        this.preOrder(this.root);
-        System.out.println();
+    printPreOrder() {
+        let preOrder = "PreOrder: ";
+        preOrder += this.preOrder(this.root);
+        console.log(preOrder);
     }
 
-    private void preOrder(Node node) {
+    preOrder(node) {
+        let preOrder = "";
+
         if (node != null) {
-            System.out.print(node.value + " ");
-            this.preOrder(node.leftChild);
-            this.preOrder(node.rightChild);
+            preOrder += node.value + " ";
+            preOrder += this.preOrder(node.leftChild);
+            preOrder += this.preOrder(node.rightChild);
         }
+
+        return preOrder;
     }
 
     //imprime a arvore no percurso "pos ordem"
-    public void postOrder() {
-        System.out.print("PostOrder: ");
-        this.postOrder(this.root);
-        System.out.println();
+    printPostOrder() {
+        let postOrder = "PostOrder: ";
+        postOrder += this.postOrder(this.root);
+        console.log(postOrder);
     }
 
-    private void postOrder(Node node) {
+    postOrder(node) {
+        let postOrder = "";
+
         if (node != null) {
-            this.postOrder(node.leftChild);
-            this.postOrder(node.rightChild);
-            System.out.print(node.value + " ");
+            postOrder = node.value + " ";
+            postOrder += this.postOrder(node.leftChild);
+            postOrder += this.postOrder(node.rightChild);
         }
+
+        return postOrder;
     }
 
 }

@@ -130,7 +130,7 @@ public class BinarySearchTree {
 
     //imprime a arvore no percurso "pos ordem"
     public void postOrder() {
-        System.out.print("PreOrder: ");
+        System.out.print("PostOrder: ");
         this.postOrder(this.root);
         System.out.println();
     }
