@@ -11,7 +11,6 @@ public class AVLtree {
 
         public Node(int value) {
             this.value = value;
-            this.balancingFactor = 0;
         }
     }
 
