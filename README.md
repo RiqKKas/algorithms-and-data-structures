@@ -35,7 +35,7 @@ Repositório voltado para estudos sobre os algoritmos e estruturas de dados clá
   <tr>
    <td width="300px"><a href="https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca">Árvore Binária de Busca</a></td>
     <td width="300px"><a href="./data-structures/dynamic-structures/src/java/BinarySearchTree.java">Java</a></td>
-    <td width="300px"><a href="./data-structures/dynamic-structures/src/js/BinarySearchTree.jss">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/js/BinarySearchTree.js">JavaScrip</a></td>
   </tr>
     <tr>
    <td width="300px"><a href="https://pt.wikipedia.org/wiki/%C3%81rvore_AVL">Árvore AVL</a></td>
