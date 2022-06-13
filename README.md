@@ -34,14 +34,35 @@ Repositório voltado para estudos sobre os algoritmos e estruturas de dados clá
   </tr>
   <tr>
    <td width="300px"><a href="https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca">Árvore Binária de Busca</a></td>
-    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/BinarySearchTree.java">Java</a></td>
-    <td width="300px"><a href="./data-structures/dynamic-structures/src/js/BinarySearchTree.js">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/trees/BinarySearchTree.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/js/trees/BinarySearchTree.js">JavaScrip</a></td>
   </tr>
-    <tr>
+  <tr>
    <td width="300px"><a href="https://pt.wikipedia.org/wiki/%C3%81rvore_AVL">Árvore AVL</a></td>
-    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/AVLtree.java">Java</a></td>
-    <td width="300px"><a href="./data-structures/dynamic-structures/src/js/AVLtree.js">JavaScrip</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/trees/AVLtree.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/js/trees/AVLtree.js">JavaScrip</a></td>
   </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Não Direcionado Não Ponderado (Matriz de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/graphs/adjacencymatrix/UndirectedUnweightedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/graphs/UndirectedUnweightedGraph.js">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Direcionado Não Ponderado (Matriz de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/graphs/adjacencymatrix/UnweightedDirectedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/graphs/UnweightedDirectedGraph.js">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Direcionado Ponderado (Matriz de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/graphs/adjacencymatrix/WeightedDirectedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/graphs/WeightedDirectedGraph.js">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Não Direcionado Ponderado (Matriz de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/java/graphs/adjacencymatrix/WeightedUndirectedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/static-structures/src/js/graphs/WeightedUndirectedGraph.js">JavaScrip</a></td>
+  </tr>
+
 </table>
 
 ---
