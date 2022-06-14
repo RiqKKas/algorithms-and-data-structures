@@ -1,3 +1,5 @@
+package java.trees;
+
 public class AVLtree {
 
     //classe necessaria para a estrutura ligada

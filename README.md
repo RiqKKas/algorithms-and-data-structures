@@ -62,6 +62,26 @@ Repositório voltado para estudos sobre os algoritmos e estruturas de dados clá
     <td width="300px"><a href="./data-structures/static-structures/src/java/graphs/adjacencymatrix/WeightedUndirectedGraph.java">Java</a></td>
     <td width="300px"><a href="./data-structures/static-structures/src/js/graphs/WeightedUndirectedGraph.js">JavaScrip</a></td>
   </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Não Direcionado Não Ponderado (Lista de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist/UndirectedUnweightedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Direcionado Não Ponderado (Lista de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist/UnweightedDirectedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Direcionado Ponderado (Lista de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist/WeightedDirectedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist">JavaScrip</a></td>
+  </tr>
+  <tr>
+    <td width="300px"><a href="https://pt.wikipedia.org/wiki/Teoria_dos_grafos">Grafo Não Direcionado Ponderado (Lista de adjacência)</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist//WeightedUndirectedGraph.java">Java</a></td>
+    <td width="300px"><a href="./data-structures/dynamic-structures/src/java/graphs/adjacencylist">JavaScrip</a></td>
+  </tr>
 
 </table>
 
